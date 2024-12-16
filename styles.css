@@ -15,3 +15,16 @@ body, html {
     width: 100%; /* Ширина изображения на 100% */
     height: auto; /* Автоматическая высота для сохранения пропорций */
 }
+
+/* Стили для кнопки чата */
+.chat-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
