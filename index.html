@@ -10,6 +10,21 @@
     <div class="map-container"> <!-- Контейнер для карты -->
         <img src="test/locationtest.jpg" alt="Карта" class="map-image"> <!-- Замените путь на ваш -->
     </div>
+
+    <!-- Кнопка для открытия чата -->
+    <button class="chat-button" onclick="openChat()">Чат</button>
+
+    <!-- Модальное окно для чата -->
+    <div id="chat-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeChat()">&times;</span>
+            <h2>Чат</h2>
+            <textarea id="chat-input" placeholder="Введите сообщение..."></textarea>
+            <button onclick="sendMessage()">Отправить</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script> <!-- Подключаем файл JavaScript -->
 </body>
     
 </html>
