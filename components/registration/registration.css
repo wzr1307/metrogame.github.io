@@ -1,0 +1,209 @@
+/* Устанавливаем box-sizing для всех элементов */
+*,:after,:before {
+    box-sizing: border-box; /* Устанавливает box-sizing для всех элементов */
+}
+
+/* clearfix для обнуления float */
+.clearfix:after,.clearfix:before {
+    content: ''; /* Создает пустое содержимое */
+    display: table; /* Отображает как таблицу */
+}
+
+.clearfix:after {
+    clear: both; /* Очищает float */
+    display: block; /* Отображает как блок */
+}
+
+/* Стили для ссылок */
+a {
+    color: inherit; /* Унаследовать цвет от родителя */
+    text-decoration: none; /* Убираем подчеркивание */
+}
+
+/* Основной контейнер для формы входа/регистрации */
+.login-wrap {
+    width: 100%; /* Ширина 100% от родителя */
+    margin: auto; /* Центрирование */
+    height: 570px; /* Высота контейнера */
+    margin-top: 100px; /* Отступ сверху */
+    border-radius: 5px; /* Скругление углов */
+    max-width: 525px; /* Максимальная ширина контейнера */
+    position: relative; /* Позиционирование относительно родителя */
+    background: linear-gradient(
+        rgba(35, 43, 85, 0.75),
+        rgba(35, 43, 85, 0.95)
+    ); /* Градиентный фон */
+    background-image: url('test/reg.jpeg'); /* Замените на путь к вашему изображению фона */
+    background-size: cover; /* Масштабирование фона по размеру контейнера */
+}
+
+/* Стиль для HTML формы */
+.login-html {
+    width: 100%; /* Ширина 100% от родителя */
+    height: 100%; /* Высота 100% от родителя */
+    position: absolute; /* Абсолютное позиционирование */
+    padding: 90px 70px 50px 70px; /* Отступы внутри контейнера */
+}
+
+/* Стили для форм входа и регистрации */
+.login-html .sign-in-htm,
+.login-html .sign-up-htm {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute; /* Абсолютное позиционирование */
+    transform: rotateY(180deg); /* Поворот на 180 градусов для эффекта переворота */
+    backface-visibility: hidden; /* Скрыть заднюю сторону при повороте */
+    transition: all .4s linear; /* Анимация при переключении между формами */
+}
+
+/* Скрытие радиокнопок и чекбоксов */
+.login-html .sign-in,
+.login-html .sign-up,
+.login-form .group .check {
+    display: none; /* Скрываем элементы */
+}
+
+/* Стили для вкладок и кнопок */
+.login-html .tab,
+.login-form .group .label,
+.login-form .group .button {
+    text-transform: uppercase; /* Преобразование текста в верхний регистр */
+}
+
+.login-html .tab {
+    font-size: 22px; /* Размер шрифта для вкладок */
+    margin-right: 15px; /* Отступ справа */
+    padding-bottom: 5px; /* Отступ снизу */
+    margin: 0 15px 10px 0; /* Отступы вокруг вкладки */
+    display: inline-block; /* Вкладки отображаются в строку */
+    border-bottom: 2px solid transparent; /* Подчеркивание вкладок по умолчанию */
+}
+
+/* Цвет и стиль активных вкладок */
+.login-html .sign-in:checked + .tab,
+.login-html .sign-up:checked + .tab {
+    color: #fff; /* Цвет текста активной вкладки */
+    border-color: #1161ee; /* Цвет подчеркивания активной вкладки */
+}
+
+/* Основной контейнер для форм входа и регистрации */
+.login-form {
+    min-height: 345px; /* Минимальная высота формы */
+    position: relative; /* Позиционирование относительно родителя */
+    perspective: 1000px; /* Перспектива для 3D эффекта */
+    transform-style: preserve-3d; /* Сохранение стиля в 3D пространстве */
+}
+
+/* Группы полей ввода и кнопок */
+.login-form .group {
+    margin-bottom: 15px; /* Отступ снизу для групп полей ввода */
+}
+
+.login-form .group .label,
+.login-form .group .input,
+.login-form .group .button {
+    width: 100%; /* Ширина на всю доступную ширину */
+    color: #fff; /* Цвет текста для меток и кнопок */
+    display: block; /* Отображение как блоки */
+}
+
+/* Стиль для полей ввода и кнопок */
+.login-form .group .input,
+.login-form .group .button {
+    border: none; /* Без рамки */
+    padding: 5px 20px; /* Внутренние отступы */
+    border-radius: 25px; /* Скругление углов полей ввода и кнопок */
+    background: rgba(255, 255, 255, .1); /* Фон с прозрачностью для полей ввода и кнопок */
+}
+
+/* Стиль для полей ввода пароля (скрытие текста) */
+.login-form .group input[data-type="password"] {
+    text-security: circle; /* Защита текста пароля (не поддерживается во всех браузерах) */
+    -webkit-text-security: circle; /* Для WebKit браузеров (Safari, Chrome) */
+}
+
+/* Стиль для меток полей ввода */
+.login-form .group .label {
+    color: #aaa; /* Цвет меток полей ввода */
+    font-size: 12px; /* Размер шрифта меток полей ввода */
+}
+
+/* Стиль для кнопки отправки формы */
+.login-form .group .button {
+    background: #1161ee; /* Фон кнопки отправки формы */
+}
+
+/* Иконка чекбокса (если используется) */
+.login-form .group label .icon {
+    width: 15px;
+    height: 15px;
+    border-radius: 2px;
+    position: relative;
+    display: inline-block;
+    background: rgba(255, 255, 255, .1); /* Фон иконки чекбокса с прозрачностью */
+}
+
+/* Стили для состояния чекбокса (при выборе) */
+.login-form .group label .icon:before,
+.login-form .group label .icon:after {
+    content: '';
+    width: 10px;
+    height: 2px;
+    background: #fff; /* Цвет линий иконки чекбокса */
+    position: absolute;
+    transition: all .2s ease-in-out 0s; /* Плавный переход при изменении состояния чекбокса */
+}
+
+.login-form .group label .icon:before {
+    left: 3px;
+    width: 5px;
+    bottom: 6px;
+    transform: scale(0) rotate(0); /* Начальное состояние (скрыто) */
+}
+
+.login-form .group label .icon:after {
+    top: 6px;
+    right: 0;
+    transform: scale(0) rotate(0); /* Начальное состояние (скрыто) */
+}
+
+/* Стили для активного состояния чекбокса (при выборе) */
+.login-form .group .check:checked + label {
+    color: #fff; /* Цвет текста при выборе чекбокса */
+}
+
+.login-form .group .check:checked + label .icon {
+    background: #1161ee; /* Фон иконки при выборе чекбокса */
+}
+
+.login-form .group .check:checked + label .icon:before {
+    transform: scale(1) rotate(45deg); /* Поворот линии при выборе чекбокса (первая линия) */
+}
+
+.login-form .group .check:checked + label .icon:after {
+    transform: scale(1) rotate(-45deg); /* Поворот линии при выборе чекбокса (вторая линия) */
+}
+
+/* Анимация переключения между формами входа и регистрации */
+.login-html .sign-in:checked + .tab + .sign-up + .tab + .login-form .sign-in-htm {
+    transform: rotate(0); /* Возвращаем форму входа на место при выборе вкладки входа */
+}
+
+.login-html .sign-up:checked + .tab + .login-form .sign-up-htm {
+    transform: rotate(0); /* Возвращаем форму регистрации на место при выборе вкладки регистрации */
+}
+
+/* Разделитель между формами и нижней частью страницы */
+.hr {
+    height: 2px; 
+    margin: 60px 0 50px 0; 
+    background: rgba(255,255,255,.2); 
+}
+
+/* Центрирование ссылки "Уже член?" внизу формы регистрации*/
+.foot-lnk {
+    text-align:center; 
+}
+
