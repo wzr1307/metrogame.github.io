@@ -1,3 +1,11 @@
+body {
+    margin: 0; /* Убираем отступы по умолчанию */
+    background-image: url('test/reg.jpeg'); /* Замените на путь к вашему изображению */
+    background-size: cover; /* Масштабирование фона по размеру окна */
+    background-position: center; /* Центрирование фона */
+    height: 100vh; /* Высота на всю высоту экрана */
+}
+
 /* Устанавливаем box-sizing для всех элементов */
 *,:after,:before {
     box-sizing: border-box; /* Устанавливает box-sizing для всех элементов */
@@ -33,8 +41,7 @@ a {
         rgba(35, 43, 85, 0.75),
         rgba(35, 43, 85, 0.95)
     ); /* Градиентный фон */
-    background-image: url('test/reg.jpeg'); /* Замените на путь к вашему изображению фона */
-    background-size: cover; /* Масштабирование фона по размеру контейнера */
+   /* background-size: cover; Масштабирование фона по размеру контейнера */
 }
 
 /* Стиль для HTML формы */
