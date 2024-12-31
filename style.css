@@ -31,29 +31,6 @@ a:hover {
 
 
 
-
-.arrow {
-  position: relative;
-  width: 25px;
-  height: 25px;
-  border: 3px solid gray;
-  border-radius: 50%;
-}
-.arrow:after {
-  position: absolute;
-  top: 8px;;
-  left: 9px;
-  content: '';
-  display: block;
-  width: 7px;
-  height: 7px;
-  border-left: 3px solid white;
-  border-bottom: 3px solid white;
-  transform: rotate(45deg);
-}
-
-
-
 .tab-group {
   list-style: none;
   padding: 0;
